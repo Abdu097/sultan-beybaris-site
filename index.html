@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="kk">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8" />
+  <title>Сұлтан Бейбарыс мешіті</title>
+
+  <link rel="preconnect" href="https://sajda.com">
+  <link rel="dns-prefetch" href="https://sajda.com">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div id="progressBar"></div>
+
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="#top" aria-label="Сұлтан Бейбарыс">
+        <img class="brand__logo" src="./logo.png" alt="Logo" />
+        <span class="brand__name" data-i18n="brand_name">Сұлтан Бейбарыс</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav__link" href="#about" data-i18n="nav_about">Біз туралы</a>
+        <a class="nav__link" href="#namaz" data-i18n="nav_namaz">Намаз уақыты</a>
+        <a class="nav__link" href="#tasbih" data-i18n="nav_tasbih">Тәсбі</a>
+        <a class="nav__link" href="#wisdom" data-i18n="nav_wisdom">Даналық</a>
+        <a class="nav__link nav__link--cta" href="#donate" data-i18n="nav_donate">Садақа</a>
+      </nav>
+
+      <button class="lang" id="langBtn" type="button">KZ/RU</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="hero__content reveal">
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+        <h1 class="hero__title" data-i18n="hero_title">
+          СҰЛТАН БЕЙБАРЫС МЕШІТІ
+        </h1>
+
+        <p class="hero__subtitle" data-i18n="hero_subtitle">
+          Алланың берекесі сіздің отбасыңызға болсын.<br>
+          Садақа беру үшін төмендегі батырманы басыңыз.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#donate" data-i18n="hero_btn_main">Садақа жасау</a>
+          <a class="btn btn--ghost" href="#about" data-i18n="hero_btn_more">Толығырақ</a>
+        </div>
+      </div>
+
+      <div class="hero__glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container reveal">
+        <div class="grid grid--2">
+          <div class="mediaCard premiumCard" data-tilt>
+            <img src="./about.jpg" alt="Мешіт" loading="lazy" />
+          </div>
+
+          <div class="content">
+            <h2 class="h2" data-i18n="about_title">Біз туралы</h2>
+            <p class="lead" data-i18n="about_text">
+              Атырау қаласының Азия беткейінде, Сырым Датов көшесі, 176-мекенжайда орналасқан “Сұлтан Бейбарыс” мешіті — руханият пен қайырымдылық ордасы. 2018 жылы ел игілігіне берілген бұл қасиетті шаңырақта білікті имамдар қызмет етіп, жамағатқа насихат пен бағыт-бағдар береді. Мешітте қайырымдылық тұрақты жүргізіліп, мұқтаж отбасыларға көмек көрсетіледі, “Мектепке жол” секілді акцияларға қолдау жасалады. Сондай-ақ діни білімге үлес қосып, шәкірттерді медресе мен ислам университеттеріне жіберіп келеді. Күн сайын намаз үйрену, Құран оқу және діни сауат ашу сабақтары өтеді.
+            </p>
+
+            <!-- Адрес как кнопка (без отдельной кнопки) -->
+            <a class="btn btn--map" href="https://go.2gis.com/JscgS" target="_blank" rel="noopener">
+              <span class="btn__icon">📍</span>
+              <span data-i18n="about_address">
+                Атырау, Сырым Датов көшесі, 176 — Картаға өту
+              </span>
+              <span class="btn__arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAMAZ -->
+    <section class="section section--alt" id="namaz">
+      <div class="container reveal">
+        <div class="grid grid--2 grid--reverse">
+          <div class="content">
+            <h2 class="h2" data-i18n="namaz_title">Намаз уақыты</h2>
+            <p class="lead" data-i18n="namaz_desc">
+              Атырау қаласының намаз кестесін төмендегі сілтеме арқылы көре аласыз.
+            </p>
+
+            <a class="btn btn--primary btn--pulse"
+               href="https://sajda.com/ru/prayer-times/kazakhstan/atyrau-oblisi-atyrau/610529"
+               target="_blank" rel="noopener">
+              <span data-i18n="namaz_btn">Кестені ашу</span>
+              <span class="btn__arrow">→</span>
+            </a>
+
+            <div class="noteCard premiumCard" data-tilt>
+              <div class="noteCard__title" data-i18n="namaz_note_title">
+                Оқыған намазыңыз қабыл болсын 🤲
+              </div>
+              <div class="noteCard__text" data-i18n="namaz_note_text">
+                Қысқа еске салу: рукуғта — «Субхана Раббиял-Азыйм», сәждеде — «Субхана Раббиял-А‘лә» (3 рет).
+                Дұға: «Раббана тақаббал минна, иннака антассами‘ул-‘алим».
+              </div>
+            </div>
+          </div>
+
+          <div class="mediaCard premiumCard" data-tilt>
+            <img src="./namaz.jpg" alt="Намаз" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TASBIH -->
+    <section class="section" id="tasbih">
+      <div class="container reveal">
+        <div class="center">
+          <h2 class="h2" data-i18n="tasbih_title">Электронды тәсбі</h2>
+          <p class="lead" data-i18n="tasbih_desc">Түртіп санаңыз — автоматты сақталады.</p>
+
+          <div class="tasbih premiumCard" data-tilt>
+            <div class="tasbih__count" id="tasbihCount">0</div>
+            <button class="tasbih__tap" id="tasbihTap" type="button" aria-label="Санау"></button>
+            <div class="tasbih__hint" data-i18n="tasbih_hint">Түртіңіз</div>
+          </div>
+
+          <button class="btn btn--ghost btn--ring" id="tasbihReset" type="button" data-i18n="tasbih_reset">
+            Нөлдеу ↺
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WISDOM -->
+    <section class="section section--alt" id="wisdom">
+      <div class="container reveal">
+        <div class="center">
+          <h2 class="h2" data-i18n="wisdom_title">Даналық бұлағы</h2>
+
+          <div class="hadith premiumCard" data-tilt>
+            <div class="hadith__badge" data-i18n="wisdom_badge">ХАДИС (Бухари)</div>
+            <div class="hadith__arabic" id="hadithArabic">
+              إِنَّ مِنْ خِيَارِكُمْ أَحْسَنَكُمْ أَخْلَاقًا
+            </div>
+            <div class="hadith__text" id="hadithText">
+              «Сендердің ең жақсыларың – мінез-құлқы ең көркем болғандарың.»
+            </div>
+            <div class="hadith__source" id="hadithSource">(Бухари)</div>
+
+            <button class="btn btn--primary btn--ring" id="hadithNext" type="button" data-i18n="wisdom_next">
+              Келесі →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DONATE -->
+    <section class="section" id="donate">
+      <div class="container reveal">
+        <div class="center">
+          <h2 class="h2" data-i18n="donate_title">Садақа жасау</h2>
+          <p class="lead" data-i18n="donate_desc">QR арқылы немесе Kaspi сілтемесімен төлеуге болады.</p>
+
+          <div class="donateGrid">
+            <div class="donateCard premiumCard" data-tilt>
+              <div class="donateCard__top">
+                <div class="donateCard__title">Kaspi / Halyk</div>
+                <div class="donateCard__hint" data-i18n="donate_qr_hint">Камерамен сканерлеңіз</div>
+              </div>
+
+              <div class="qrWrap">
+                <img src="./qr.jpg" alt="QR" loading="lazy">
+              </div>
+
+              <a class="btn btn--primary btn--pulse"
+                 href="https://kaspi.kz/pay/DUMKUniversla?subservice_id=10970&region_id=39&started_from=share"
+                 target="_blank" rel="noopener">
+                <span>Сілтеме арқылы төлеу</span>
+                <span class="btn__arrow">→</span>
+              </a>
+
+              <div class="donateCard__footer" data-i18n="donate_footer">
+                Алла разы болсын. Садақаңыз қабыл болсын 🤲
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>© <span id="year"></span> Сұлтан Бейбарыс мешіті</div>
+        <div class="donateCard__footer" data-i18n="donate_footer">
+    Садақаңыз қабыл болсын 🤲
+</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
