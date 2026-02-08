@@ -606,3 +606,20 @@ body {
 html, body {
   touch-action: manipulation;
 }
+
+/* Мобильное меню — аккуратно в одну линию со скроллом */
+@media (max-width: 600px) {
+  .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav__link {
+    font-size: 13px;
+    padding: 8px 10px;
+    white-space: nowrap;
+  }
+}
