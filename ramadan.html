@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Рамазан | Сұлтан Бейбарыс мешіті</title>
+
+  <!-- твой основной стиль -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- PRO стиль только для этой страницы -->
+  <style>
+    :root{
+      --pro-bg:
+        radial-gradient(900px 520px at 18% 12%, rgba(42,166,201,.16), transparent 60%),
+        radial-gradient(900px 520px at 82% 26%, rgba(242,209,138,.20), transparent 60%),
+        linear-gradient(180deg, #f6fbff, #ffffff);
+      --pro-card: rgba(255,255,255,.78);
+      --pro-stroke: rgba(11,34,48,.10);
+      --pro-shadow: 0 26px 90px rgba(0,0,0,.14);
+      --pro-shadow2: 0 42px 150px rgba(0,0,0,.18);
+      --ease: cubic-bezier(.22,1,.36,1);
+      --t: rgba(11,34,48,.72);
+      --t2: rgba(11,34,48,.88);
+      --p: rgba(11,111,138,.95);
+    }
+
+    body{ background: var(--pro-bg); overflow-x:hidden; }
+
+    .wrap{
+      min-height: 100vh;
+      padding: 86px 0 70px;
+    }
+
+    .topbar{
+      width:min(1180px, calc(100% - 40px));
+      margin: 0 auto 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+
+    .brandPro{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      text-decoration:none;
+      color: inherit;
+      font-weight: 1000;
+      letter-spacing: -0.01em;
+    }
+    .brandPro img{
+      width:40px; height:40px;
+      border-radius: 14px;
+      box-shadow: 0 14px 40px rgba(0,0,0,.12);
+      background: rgba(255,255,255,.82);
+    }
+
+    .containerPro{
+      width:min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .heroPro{
+      position: relative;
+      border-radius: 26px;
+      background: var(--pro-card);
+      border: 1px solid var(--pro-stroke);
+      box-shadow: var(--pro-shadow);
+      overflow:hidden;
+      isolation:isolate;
+    }
+
+    .heroPro__bg{
+      position:absolute; inset:0;
+      background: url("./mosque-bg.png") center/cover no-repeat;
+      transform: scale(1.04);
+      filter: saturate(1.05) contrast(1.02);
+      animation: zoom 18s ease-in-out infinite alternate;
+    }
+    @keyframes zoom{
+      from{ transform: scale(1.04); }
+      to{ transform: scale(1.10); }
+    }
+
+    .heroPro__overlay{
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.76));
+    }
+    .heroPro__glow{
+      position:absolute; inset:-35%;
+      background:
+        radial-gradient(circle at 25% 25%, rgba(42,166,201,.22), transparent 55%),
+        radial-gradient(circle at 75% 65%, rgba(242,209,138,.20), transparent 55%);
+      filter: blur(42px);
+      opacity: .95;
+      animation: floatGlow 7.5s ease-in-out infinite;
+      pointer-events:none;
+      z-index: 0;
+    }
+    @keyframes floatGlow{
+      0%,100%{ transform: translate3d(0,0,0); }
+      50%{ transform: translate3d(0,-18px,0); }
+    }
+
+    .heroPro__content{
+      position: relative;
+      z-index: 2;
+      padding: 38px 26px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 20px;
+      align-items:start;
+    }
+
+    .arabic{
+      font-family: "Amiri", serif;
+      font-size: clamp(18px, 2vw, 26px);
+      color: var(--p);
+      opacity: .95;
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+
+    .title{
+      margin: 0 0 12px;
+      font-size: clamp(28px, 3.5vw, 48px);
+      font-weight: 1000;
+      letter-spacing: -0.02em;
+      color: var(--t2);
+    }
+
+    .lead{
+      margin:0 0 16px;
+      font-weight: 700;
+      color: var(--t);
+      line-height: 1.7;
+      font-size: clamp(14px, 1.1vw, 18px);
+    }
+
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .badge{
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(42,166,201,.10);
+      border: 1px solid rgba(42,166,201,.18);
+      font-weight: 1000;
+      color: rgba(11,111,138,.95);
+      display:flex;
+      align-items:center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .badge strong{
+      color: rgba(11,34,48,.92);
+      font-size: 16px;
+    }
+
+    .rightCard{
+      border-radius: 22px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(11,34,48,.10);
+      padding: 16px 16px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.10);
+    }
+    .rightCard__t{
+      font-weight: 1000;
+      margin-bottom: 8px;
+    }
+    .rightCard__p{
+      margin:0;
+      color: rgba(11,34,48,.70);
+      font-weight: 750;
+      line-height: 1.65;
+    }
+
+    /* нижние PRO-карточки */
+    .grid2{
+      margin-top: 22px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .proCard{
+      border-radius: 24px;
+      background: var(--pro-card);
+      border: 1px solid var(--pro-stroke);
+      box-shadow: 0 22px 80px rgba(0,0,0,.12);
+      overflow:hidden;
+      position: relative;
+      transition: transform .22s var(--ease), box-shadow .22s var(--ease), filter .22s var(--ease);
+      will-change: transform, box-shadow;
+    }
+    .proCard:hover{
+      transform: translateY(-8px);
+      box-shadow: var(--pro-shadow2);
+      filter: saturate(1.03);
+    }
+    .proCard__inner{ padding: 18px; }
+
+    .h3{
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: 1000;
+      color: var(--t2);
+    }
+    .small{
+      margin: 0 0 12px;
+      color: var(--t);
+      font-weight: 750;
+      line-height: 1.65;
+    }
+
+    .prices{
+      border-radius: 18px;
+      padding: 14px 14px;
+      background: rgba(255,255,255,.70);
+      border: 1px dashed rgba(11,34,48,.16);
+    }
+    .row{
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      padding: 10px 8px;
+      border-radius: 14px;
+      font-weight: 900;
+      color: rgba(11,34,48,.80);
+    }
+    .row + .row{ border-top: 1px solid rgba(11,34,48,.08); }
+    .row strong{ color: rgba(11,34,48,.95); }
+
+    .counter{
+      margin-top: 12px;
+      font-weight: 1000;
+      color: rgba(11,34,48,.78);
+    }
+    .counter b{ color: rgba(11,34,48,.95); }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    /* появление */
+    .appear{
+      opacity: 0;
+      transform: translateY(18px);
+      animation: appear .75s var(--ease) forwards;
+    }
+    .d1{ animation-delay: .08s; }
+    .d2{ animation-delay: .16s; }
+    .d3{ animation-delay: .24s; }
+    @keyframes appear{
+      to{ opacity: 1; transform: translateY(0); }
+    }
+
+    /* responsive */
+    @media (max-width: 980px){
+      .heroPro__content{ grid-template-columns: 1fr; }
+      .grid2{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- top -->
+    <div class="topbar appear">
+      <a class="brandPro" href="index.html">
+        <img src="./logo.png" alt="Logo">
+        <span>Сұлтан Бейбарыс</span>
+      </a>
+
+      <a class="btn btn--ghost btn--ring" href="index.html">← Басты бет</a>
+    </div>
+
+    <div class="containerPro">
+      <!-- HERO -->
+      <section class="heroPro appear d1">
+        <div class="heroPro__bg"></div>
+        <div class="heroPro__overlay"></div>
+        <div class="heroPro__glow"></div>
+
+        <div class="heroPro__content">
+          <div>
+            <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+            <h1 class="title">РАМАЗАН — ҚАЙЫРЫМДЫЛЫҚ ПЕН МЕЙІРІМ АЙЫ</h1>
+            <p class="lead">
+              Құрметті жамағат! Қасиетті айда бір ауыз ас берудің сауабы ұшан-теңіз.
+              Жолаушыларға, мұқтаж жандарға және аз қамтылған отбасыларға ауызашар ұйымдастырып,
+              үлкен сауапқа кенелуге шақырамыз.
+            </p>
+
+            <div class="badges">
+              <div class="badge">🗓️ <span id="dateRange">18.02.2026 — 19.03.2026</span></div>
+              <div class="badge">⏳ Қалған күн: <strong id="daysLeft">—</strong></div>
+              <div class="badge">✅ Бос күн: <strong id="freeDays">—</strong></div>
+            </div>
+          </div>
+
+          <div class="rightCard">
+            <div class="rightCard__t">🤲 Хадис</div>
+            <p class="rightCard__p">
+              «Кімде-кім ораза ұстаған жанға ауыз аштырса, оған ораза ұстағанның сауабындай сауап жазылады».
+            </p>
+            <div style="height:10px"></div>
+            <p class="rightCard__p" style="font-weight:1000;color:rgba(11,34,48,.82)">
+              Садақаңыз қабыл болсын 🤲
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRO CARDS -->
+      <section class="grid2">
+        <div class="proCard appear d2">
+          <div class="proCard__inner">
+            <h3 class="h3">🕌 Ауызашар туралы</h3>
+            <p class="small">
+              “Сұлтан Бейбарыс” мешітінде <b>100 адамға</b> дейін ауызашар беруге мүмкіндік бар.
+            </p>
+
+            <div class="prices">
+              <div class="row"><span>1 адам</span><strong>2500 ₸</strong></div>
+              <div class="row"><span>100 адам</span><strong>250 000 ₸</strong></div>
+            </div>
+
+            <div class="counter" id="counterText">Жүктелуде…</div>
+          </div>
+        </div>
+
+        <div class="proCard appear d3">
+          <div class="proCard__inner">
+            <h3 class="h3">📞 Байланыс және төлем</h3>
+            <p class="small">
+              Бас имам: <b>Ержан Қуанышұлы</b><br>
+              WhatsApp: <b>87020004887</b>
+            </p>
+
+            <p class="small">
+              📲 Үлес қосу үшін Kaspi:<br>
+              <b>+7 (707) 777-71-94 — Гиният С.</b>
+            </p>
+
+            <div class="actions">
+              <a class="btn btn--ghost btn--ring"
+                 href="https://wa.me/77020004887"
+                 target="_blank" rel="noopener">
+                WhatsApp жазу →
+              </a>
+
+              <a class="btn btn--primary btn--pulse btn--ring"
+                 href="https://kaspi.kz/pay/DUMKUniversla?subservice_id=10970&region_id=39&started_from=share"
+                 target="_blank" rel="noopener">
+                Kaspi арқылы үлес қосу →
+              </a>
+            </div>
+
+            <div class="counter" style="margin-top:12px;">
+              Алла ниеттеріңізді қабыл етіп, берген садақаларыңызды еселеп қайтарсын!
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    // Точные даты (Казахстан): 18 Feb 2026 — 19 Mar 2026
+    const START = new Date(2026, 1, 18); // month: 0=Jan, 1=Feb
+    const END   = new Date(2026, 2, 19); // March
+
+    // Свободные дни (бронь убрали) = просто все дни периода
+    function daysInclusive(a, b){
+      const ms = 24*60*60*1000;
+      const A = new Date(a.getFullYear(), a.getMonth(), a.getDate()).getTime();
+      const B = new Date(b.getFullYear(), b.getMonth(), b.getDate()).getTime();
+      return Math.floor((B - A)/ms) + 1;
+    }
+
+    const total = daysInclusive(START, END);
+
+    const today = new Date();
+    const t0 = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+    let left = 0;
+    if (t0.getTime() < START.getTime()) left = total;
+    else if (t0.getTime() > END.getTime()) left = 0;
+    else left = daysInclusive(t0, END);
+
+    document.getElementById("daysLeft").textContent = String(left);
+    document.getElementById("freeDays").textContent = String(total); // бронь жоқ => бәрі бос
+    document.getElementById("counterText").innerHTML =
+      `Рамазан ұзақтығы: <b>${total}</b> күн • Қалғаны: <b>${left}</b> күн`;
+  </script>
+</body>
+</html>
